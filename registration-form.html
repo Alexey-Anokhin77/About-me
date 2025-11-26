@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Register</title>
+</head>
+<body>
+<h1>Register</h1>
+<!-- temp get, todo: post -->
+<form method="get">
+  <div>
+    <label for="full-name">Full Name</label>
+    <input type="text"
+           name="full_name"
+           id="full-name"
+           placeholder="Full Name"
+           required
+    >
+  </div>
+  <div>
+    <label for="username">Username</label>
+    <input
+      type="text"
+      name="username"
+      id="username"
+      placeholder="Username"
+      minlength="3"
+      maxlength="32"
+      required
+    >
+  </div>
+  <div>
+    <label for="email">Email address</label>
+    <input
+      type="email"
+      name="email"
+      id="email"
+      placeholder="email@example.com"
+      required
+    >
+  </div>
+  <div>
+    <label for="password">Password</label>
+    <input
+      type="password"
+      name="password"
+      id="password"
+      placeholder="Password"
+      required
+    >
+  </div>
+  <div>
+    <label for="male">Male</label>
+    <input
+      type="radio"
+      name="sex"
+      value="male"
+      id="male"
+    >
+    <label for="female">Female</label>
+    <input
+      type="radio"
+      name="sex"
+      value="female"
+      id="female"
+    >
+  </div>
+  <div>
+    <label
+      for="accept-terns">
+      I accept terms and conditions
+    </label>
+    <input
+      type="checkbox"
+      name="terms"
+      id="accept-terns"
+      required
+    >
+  </div>
+  <div>
+    <label
+      for="accept-news-letter">
+      Subscribe to news letter
+    </label>
+    <input
+      type="checkbox"
+      name="newsletter"
+      id="accept-news-letter"
+    >
+  </div>
+  <div>
+    <label for="city">City</label>
+    <select name="city" id="city" required>
+      <option value="Moscow">Moscow</option>
+      <option value="Tokyo">Tokyo</option>
+      <option value="New-York">New-York</option>
+      <option value="Peking">Peking</option>
+    </select>
+  </div>
+  <div>
+    <label for="address">Address</label>
+    <textarea
+      name="address"
+      id="address"
+      cols="35"
+      rows="3"
+      placeholder="Ul.Pushkina, dom 1"
+      required
+    ></textarea>
+  </div>
+  <div>
+    <label for="birthday">Birthday</label>
+    <input
+      type="date"
+      name="birthday"
+      id="birthday"
+      required
+    >
+  </div>
+  <input type="submit" value="Register">
+</form>
+</body>
+</html>
