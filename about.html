@@ -12,6 +12,7 @@
       background-color: #f4f4f4;
       font-family: Arial, sans-serif;
     }
+
     header {
       background-color: #c1f3dd;
       padding: 2px 4px;
@@ -19,13 +20,16 @@
       box-shadow: 5px 5px 5px #888;
       border-radius: 5px;
     }
+
     header > h1 {
       margin: 2px 0;
     }
+
     .quotes {
       padding: 2px 1px;
       margin: 20px 0;
     }
+
     .quotes > h2 {
       margin: 5px 0;
     }
@@ -86,6 +90,15 @@
 </main>
 
 <footer>&copy;Alexey Anokhin, 2025</footer>
+
+<script>
+  const quotes = Array.from(document.querySelectorAll('.quote'));
+  let count = 0;
+  quotes.forEach((quote) => {
+    count += 1;
+    quote.innerText = count + '. ' + quote.innerText;
+  })
+</script>
 
 </body>
 </html>
