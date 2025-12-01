@@ -87,6 +87,8 @@
       <li><a href="https://t.me/AlexeyAnokhin">Telegram</a></li>
     </ul>
   </div>
+
+
   <div>
     <h2>Clicker game</h2>
     <div>
@@ -112,34 +114,37 @@
 <footer>&copy;Alexey Anokhin, <span id="year">2024</span></footer>
 
 <script>
-  const quotes = Array.from(document.querySelectorAll('.quote'));
-  let count = 0;
-  quotes.forEach((quote) => {
-    count += 1;
-    quote.innerText = count + '. ' + quote.innerText;
-  })
+    const quotes = Array.from(document.querySelectorAll('.quote'));
+    let count = 0;
+    quotes.forEach((quote) => {
+        count += 1;
+        quote.innerText = count + '. ' + quote.innerText;
+    })
 </script>
 
 <script>
-  const yearSpan = document.getElementById('year')
-  yearSpan.innerText = (new Date()).getFullYear().toString()
+    const yearSpan = document.getElementById('year')
+    yearSpan.innerText = (new Date()).getFullYear().toString()
 </script>
 
 <script>
-  const resetButton = document.getElementById('reset-button')
-  const clickButton = document.getElementById('click-button')
-  const clickCountResult = document.getElementById('click-count')
-  let clickCount = 0
-  function handleClick() {
-    clickCount += 1
-    clickCountResult.innerText = clickCount
-  }
-  function resetClick() {
-    clickCount = 0
-    clickCountResult.innerText = clickCount
-  }
-  clickButton.addEventListener('click', handleClick)
-  resetButton.addEventListener('click', resetClick)
+    const resetButton = document.getElementById('reset-button')
+    const clickButton = document.getElementById('click-button')
+    const clickCountResult = document.getElementById('click-count')
+    let clickCount = 0
+
+    function handleClick() {
+        clickCount += 1
+        clickCountResult.innerText = clickCount
+    }
+
+    function resetClick() {
+        clickCount = 0
+        clickCountResult.innerText = clickCount
+    }
+
+    clickButton.addEventListener('click', handleClick)
+    resetButton.addEventListener('click', resetClick)
 </script>
 
 </body>
