@@ -73,11 +73,17 @@
         <h3>My favorite frameworks:</h3>
         <input
           id="search-favorite-framework"
-          class="form-control my-2"
+          class="form-control my-2 d-none"
           type="search"
           placeholder="Search for frameworks..."
           aria-label="Search for frameworks"
         >
+        <noscript>
+          <div class="alert alert-info" role="alert">
+            <h5 class="alert-heading"> Interactive search doesn't work without JavaScript.</h5>
+            Please enable JavaScript in your browser and reload the page to use search.
+          </div>
+        </noscript>
 
         <ul
           id="favorite-frameworks-list"
@@ -230,6 +236,8 @@
   <script>
     const searchInput = document.getElementById('search-favorite-framework');
     const frameworksList = document.getElementById('favorite-frameworks-list');
+
+    searchInput.classList.remove('d-none');
 
     function handleSearch() {
       const searchValue = searchInput.value.toLowerCase();
